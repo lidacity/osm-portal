@@ -18,6 +18,25 @@ LAT = "53.92"
 LON = "27.55"
 ZOOM = "11"
 
+#http://wowik.byethost7.com/routes/ru-ore/55.htm
+#http://stat.latlon.org/
+#https://osm.cupivan.ru/
+#https://disaster.ninja/live/#id=862b38e7-f7e1-486f-81d3-05394662d7c0;position=25.268380854291763,53.83782195587909;zoom=8.434805551671564
+#https://osmapa.pl/#lat=53.8856&lon=25.3226&z=14&m=os
+#https://opentouchmap.org/
+#http://tools.geofabrik.de/mc/#10/53.9313/25.4735&num=4&mt0=mapnik&mt1=geofabrik-basic-colour&mt2=mapnik-german&mt3=here-map
+#http://geo.klein-computing.de/gpx_tool.html
+#https://map.meurisse.org/
+#https://maps.darksky.net/@temperature,52.616,28.828,7
+#http://openwhatevermap.xyz/#11/53.8533/25.4196
+#http://maps.stamen.com/toner/#13/53.8966/-334.6992
+#https://print.get-map.org/new/
+#http://fieldpapers.org/compose#3/25.40/-10.99
+#https://orda.of.by/.map/?53.902253,27.561854&m=gm/17,osm/6,rkka/13,wig/13
+#https://taginfo.openstreetmap.org/
+
+
+#https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services
 objects = [
 	{
 		'caption': "Официальные рендеры",
@@ -28,6 +47,15 @@ objects = [
 				'image': "mapnik.png",
 				'descr': "Основной рендер OpenStreetMap. При этом самый быстрый - задержка между внесением изменений в карту и отрисовкой обычно не превышает нескольких минут.",
 				'refresh': "Минуты",
+				'coverage': "Вся планета",
+			},
+			{
+				'name': "CyclOSM",
+				'url': f"http://www.openstreetmap.org/?lat={LAT}&lon={LON}&zoom={ZOOM}&layers=Y",
+				'image': "CyclOSM.png",
+				'descr': "CyclOSM — это принципиально новая карта для велосипедистов, основанная на данных OpenStreetMap. Проект ставит своей целью — создание красивой и практичной карты для велосипедистов, независимо от их привычек и способностей.",
+				'author': "<a href='https://cyclosm.org/'>cyclosm</a>",
+				'refresh': "Несколько дней",
 				'coverage': "Вся планета",
 			},
 			{
@@ -47,10 +75,19 @@ objects = [
 				'coverage': "Вся планета",
 			},
 			{
-				'name': "MapQuest Open",
-				'url': f"http://www.openstreetmap.org/?lat={LAT}&lon={LON}&zoom={ZOOM}&layers=Q",
-				'image': "mapquest.png",
-				'descr': "Альтернативный слой от <a href='mapquest.com'>mapquest.com</a>",
+				'name': "&Ouml;PNV-Karte",
+				'url': f"http://www.xn--pnvkarte-m4a.de/?zoom={ZOOM}&lat={LAT}&lon={LON}",
+				'image': "opnvkarte.png",
+				'descr': "Сторонний рендер с маршрутами общественного транспорта.",
+				'author': "<a href='http://xn--pnvkarte-m4a.de/'>&Ouml;PNV-Karte</a>",
+				'refresh': "Раз в несколько дней",
+				'coverage': "Вся планета",
+			},
+			{
+				'name': "Humanitarian",
+				'url': f"http://www.openstreetmap.org/?lat={LAT}&lon={LON}&zoom={ZOOM}&layers=H",
+				'image': "humanitarian.png",
+				'descr': "Этот стиль карты сосредоточен на ресурсах, полезных для гуманитарных организаций и граждан в целом в чрезвычайных ситуациях, выделяя POI, такие как водные ресурсы (колодцы, ручные насосы, пожарные гидранты ...), источники света, общественные здания, социальные здания, качество дорог и т.д. Используемые цвета светлые, поэтому люди могут распечатать их, а затем легко рисовать и писать поверх карты (это полезная функция для гуманитарных организаций для обновления информации на распечатанной карте в таких ситуациях, как землетрясение, например).",
 				'refresh': "Несколько дней",
 				'coverage': "Вся планета",
 			},
@@ -58,43 +95,8 @@ objects = [
 	},
 
 	{
-		'caption': "Сторонние рендеры",
+		'caption': "Беларусь",
 		'items': [
-			{
-				'name': "MapSurfer.NET/Road",
-				'url': f"http://www.openmapsurfer.uni-hd.de/?layers=B0000&zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "mapsurfer.png",
-				'descr': "Сторонний рендер с псевдотрехмерными зданиями, написанный на C#.",
-				'refresh': "Регулярно (но низкие зумы редко)",
-				'authors': "Maxim Rylov and Vitaly Chezganov",
-				'coverage': "Вся планета",
-			},
-			{
-				'name': "Чепецк.net",
-				'url': f"http://чепецк.net/?lat={LAT}&lon={LON}&zoom={ZOOM}",
-				'image': "chepetsk.png",
-				'descr': "Рендер с подробным туристическим стилем.",
-				'author': "<a href='http://www.openstreetmap.org/user/Max%20Vasilev'>Max Vasilev</a>",
-				'refresh': "Ежедневно",
-				'coverage': "Страны СНГ",
-			},
-			{
-				'name': "?MapSurfer.NET/Topographic",
-				'url': f"http://www.mapsurfer.net/?layers=0BT&zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "mapsurfer_topo.png",
-				'descr': "Сторонний рендер с псевдотрехмерными зданиями, написанный на C#, топографический слой.",
-				'refresh': "Давно не обновлялся",
-				'authors': "Maxim Rylov and Vitaly Chezganov",
-				'coverage': "Вся планета",
-			},
-			{
-				'name': "MapSurfer.NET/Hybrid",
-				'url': f"http://www.openstreetmap.ru/#layer=BY&zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "mapsurfer_hybrid.png",
-				'descr': "Полупрозрачный слой с подписями для использования поверх спутниковых снимков и карт",
-				'authors': "Maxim Rylov and Vitaly Chezganov",
-				'coverage': "Вся планета",
-			},
 			{
 				'name': "OpenStreetMap.by",
 				'url': f"http://openstreetmap.by/?lat={LAT}&lon={LON}&zoom={ZOOM}",
@@ -105,28 +107,26 @@ objects = [
 				'coverage': "Вся планета",
 			},
 			{
-				'name': "LatLon.org/Buildings",
-				'url': f"http://latlon.org/buildings?zoom={ZOOM}&lat={LAT}&lon={LON}&layers=BFT",
+				'name': "LatLon.org",
+				'url': f"http://latlon.org/#{ZOOM}/{LAT}/{LON}?layers=L",
 				'image': "latlon_buildings.png",
-				'descr': "Рендер слоя с псевдотрехмерными зданиями.",
+				'descr': "Рендер Беларуси на белорусском языке.",
 				'refresh': "Реальное время",
 				'author': "<a href='http://www.openstreetmap.org/user/Kom%D1%8Fpa'>Komяpa</a>",
-				'coverage': "СНГ",
+				'coverage': "Беларусь",
 			},
+		],
+	},
+
+	{
+		'caption': "Сторонние рендеры",
+		'items': [
 			{
-				'name': "&Ouml;PNV-Karte",
-				'url': f"http://www.xn--pnvkarte-m4a.de/?zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "opnvkarte.png",
-				'descr': "Сторонний рендер с маршрутами общественного транспорта.",
-				'refresh': "Раз в несколько дней",
-				'coverage': "Европа (до 45° в.д.)",
-			},
-			{
-				'name': "openptmap",
-				'url': f"http://openptmap.org/?zoom={ZOOM}&lat={LAT}&lon={LON}&layers=B0000TFT",
-				'image': "openptmap.png",
-				'descr': "Сторонний рендер с маршрутами общественного транспорта.",
-				'refresh': "Раз в день",
+				'name': "openstreetmap.ru",
+				'url': f"http://www.openstreetmap.ru/#layer=BY&zoom={ZOOM}&lat={LAT}&lon={LON}",
+				'image': "mapsurfer_hybrid.png",
+				'descr': "Полупрозрачный слой с подписями для использования поверх спутниковых снимков и карт",
+				'authors': "Maxim Rylov and Vitaly Chezganov",
 				'coverage': "Вся планета",
 			},
 			{
@@ -135,36 +135,6 @@ objects = [
 				'image': "openstreetbrowser.png",
 				'descr': "Карта с большим количеством накладываемых слоёв с различной информацией (общественный транспорт, заправки, питание, туризм и т.д.).",
 				'coverage': "Европа (до 45° в.д.)",
-			},
-			{
-				'name': "Hike & Bike Map",
-				'url': f"http://hikebikemap.de/?zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "hikebike.png",
-				'descr': "Карта для пешеходов и велосипедистов. Поддерживает визуализацию рельефа и ночного освещения.",
-			},
-			{
-				'name': "CloudMade Maps",
-				'url': f"http://maps.cloudmade.com/?zoom={ZOOM}&lat={LAT}&lng={LON}",
-				'image': "cloudmade.png",
-				'descr': "Карта с большим количеством разнообразных стилей отрисовки на выбор, с возможностью создания своих стилей.",
-				'authors': "<a href='http://cloudmade.com/'>CloudMade</a>",
-				'refresh': "Несколько дней",
-			},
-			{
-				'name': "LatLon.org/Public transport",
-				'url': f"http://latlon.org/pt/?zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "latlon_pt.png",
-				'descr': "Рендер маршрутов общественного транспорта.",
-				'author': "<a href='http://www.openstreetmap.org/user/Kom%D1%8Fpa'>Komяpa</a>",
-			},
-			{
-				'name': "glosm",
-				'url': f"http://glosm.amdmi3.ru/?zoom={ZOOM}&lat={LAT}&lon={LON}&layers=B0",
-				'image': "glosm.png",
-				'descr': "OpenGL рендер, поддерживающий помимо генерации тайлов вид от первого лица в реальном времени.",
-				'author': "<a href='http://www.openstreetmap.org/user/AMDmi3'>AMDmi3</a>",
-				'coverage': "Москва",
-				'refresh': "Нерегулярно",
 			},
 		],
 	},
@@ -180,58 +150,12 @@ objects = [
 				'coverage': "Вся планета",
 				'refresh': "Приблизительно раз в неделю (актуальность данных можно посмотреть нажав на кнопку с шестерёнкой)",
 			},
-			{
-				'name': "YourNavigation",
-				'url': f"http://www.yournavigation.org/",
-				'image': "routing.png",
-				'descr': "Прокладка маршрутов по карте OSM.",
-				'coverage': "Вся планета",
-			},
-			{
-				'name': "OpenRouteService.org",
-				'url': f"http://openrouteservice.org/?zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "openrouteservice.png",
-				'descr': "Прокладка маршрутов по карте OSM.",
-				'coverage': "Вся планета",
-			},
-		],
-	},
-
-	{
-		'caption': "Мэшапы и рендеринг сторонней информации на основе OSM",
-		'items': [
-			{
-				'name': "Social Networks in OpenLayers",
-				'url': f"http://social.osm4people.org/?zoom={ZOOM}&lat={LAT}&lon={LON}&layers=0B00000FF0TFFFFFTT",
-				'image': "social.png",
-				'descr': "Различные социальные сервисы (<a href='http://panoramio.com'>Panoramio</a>, <a href='http://flickr.com'>Flickr</a>, <a href='http://last.fm'>Last.fm</a>, <a href='http://twitter.com'>Twitter</a> и другие) на карте OSM.",
-			},
-			{
-				'name': "OpenSeaMap/Weather",
-				'url': f"http://map.openseamap.org/map/weather.php?zoom={ZOOM}&lat={LAT}.65945&lon={LON}",
-				'image': "openseamap_weather.png",
-				'descr': "Погодная карта",
-			},
-			{
-				'name': "OpenWeatherMap",
-				'url': f"http://openweathermap.org/?zoom={ZOOM}&lat={LAT}&lon={LON}", # XXX: lat/lon is not in degrees! (7526976.40009, 4273570.40519)
-				'image': "openweathermap.png",
-				'descr': "Погодная карта",
-			},
 		],
 	},
 
 	{
 		'caption': "Инструменты контроля качества",
 		'items': [
-			{
-				'name': "OpenStreetBugs",
-				'url': f"http://osmbugs.org/?lat={LAT}&lon={LON}&zoom={ZOOM}",
-				'image': "openstreetbugs.png",
-				'descr': "Простой в использовании сервис, где любой желающий может оставить сообщение о ошибке или неточности на карте, а любой пользователь OpenStreetMap может помочь исправить эти ошибки.",
-				'coverage': "Вся планета",
-				'refresh': "В реальном времени",
-			},
 			{
 				'name': "KeepRight!",
 				'url': f"http://keepright.ipax.at/report_map.php?zoom={ZOOM}&lat={LAT}&lon={LON}",
@@ -242,7 +166,7 @@ objects = [
 			},
 			{
 				'name': "WHO DID IT?!",
-				'url': f"http://zverik.osm.rambler.ru/whodidit/?zoom={ZOOM}&lat={LAT}&lon={LON}",
+				'url': f"http://simon04.dev.openstreetmap.org/whodidit/?zoom={ZOOM}&lat={LAT}&lon={LON}",
 				'image': "whodidit.png",
 				'descr': "Мониторинг правок пользователей на выбранной территории.",
 				'coverage': "Вся планета",
@@ -256,115 +180,6 @@ objects = [
 				'coverage': "Европа (до 45° в.д.)",
 				'refresh': "Несколько дней",
 				'authors': "<a href='http://www.geofabrik.de/'>Geofabrik GmbH</a>",
-			},
-			{
-				'name': "Turn Restrictions",
-				'url': f"http://map.comlu.com/?zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "turn_restrictions.png",
-				'descr': "Инструмент для визуализации и выявления ошибок в ограничениях поворотов.",
-				'author': "<a href='http://www.openstreetmap.org/user/Zartbitter'>Zartbitter</a>",
-				'coverage': "Вся планета",
-			},
-			{
-				'name': "?LatLon.org/Lonely",
-				'url': f"http://latlon.org/v/lonely?zoom={ZOOM}&lat={LAT}&lon={LON}&layers=BT",
-				'image': "latlon_lonely.png",
-				'descr': "Рендер населенных пунктов, к которым не отмечено подъездных дорог.",
-				'author': "<a href='http://www.openstreetmap.org/user/Kom%D1%8Fpa'>Komяpa</a>",
-				'coverage': "Вся планета",
-			},
-			{
-				'name': "?Duplicate Nodes",
-				'url': f"http://matt.dev.openstreetmap.org/dupe_nodes/?zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "dupenodes.png",
-				'descr': "Простой инструмент, показывающий дублированные точки.",
-				'refresh': "Практически в реальном времени",
-				'coverage': "Вся планета",
-			},
-			{
-				'name': "?YAV/Водные объекты",
-				'url': f"http://yav.gis-lab.info/rsa/map?zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "yav_water.png",
-				'descr': "Валидатор водных объектов. Позволяет находить такие ошибки как незаконченные реки (которые никуда не впадают) и неправильное направление рек.",
-				'author': "<a href='http://www.openstreetmap.org/user/Aleksandr%20Dezhin'>Aleksandr Dezhin</a>",
-				'coverage': "Россия",
-			},
-			{ # Dezhin: Да пока я ту штуку которая была с картой отключил, все равно все пользуются текстовым вариантом.
-				'name': "?YAV/ОКАТО",
-				'url': f"http://dezhin.gis-lab.info/yav/?layers=BTFFFFFF&zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "yav_okato.png",
-				'descr': "Валидатор населённых пунктов.",
-				'author': "<a href='http://www.openstreetmap.org/user/Aleksandr%20Dezhin'>Aleksandr Dezhin</a>",
-				'coverage': "Россия",
-			},
-			{
-				'name': "?YAV/Ошибки границ",
-				'url': f"http://yav.gis-lab.info/boundaries/map?zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "yav_boundary.png",
-				'descr': "Валидатор границ.",
-				'author': "<a href='http://www.openstreetmap.org/user/Aleksandr%20Dezhin'>Aleksandr Dezhin</a>",
-				'coverage': "Россия",
-			},
-		],
-	},
-
-	{
-		'caption': "Рендеры специфичной информации",
-		'items': [
-			{
-				'name': "ITO OSM Mapper",
-				'url': f"http://www.itoworld.com/product/osm/",
-				'image': "ito.png",
-				'descr': "Сервис, позволяющий просматривать различную информацию по карте: время последнего редактирования объектов, правки пользователей, наличие определенных тэгов и т.д..<br>Сервис бесплатный, но требуется <a href='http://www.itoworld.com/static/product_register?product=OSM'>регистрация</a>.<br>Есть возможность экспорта изображений.",
-				'coverage': "Вся планета (но нужно будет выбрать конкретные регионы для мониторинга)",
-				'refresh': "Несколько дней",
-				'authors': "<a href='http://www.itoworld.com/'>ITO</a>",
-			},
-			{
-				'name': "ITO Map",
-				'url': f"http://www.itoworld.com/product/data/ito_map/main",
-				'image': "itomap.png",
-				'descr': "Большое количество оверлеев, как выделяющих отдельные категории объектов (препятствия, электрическая сеть, железные дороги, водные объекты, тротуары и т.д.), так и демонстрирующих дополнительные подробности (поверхность, освещённость или полосность дорог, ограничения скорости, высотность зданий, значение layer= и т.д.)",
-				'coverage': "Вся планета",
-				'authors': "<a href='http://www.itoworld.com/'>ITO</a>",
-			},
-			{
-				'name': "Restriction Analyzer",
-				'url': f"http://osm.virtuelle-loipe.de/restrictions/?zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "restrictions.png",
-			},
-			{
-				'name': "Toolserver/lighting",
-				'url': f"http://toolserver.org/~osm/styles/?zoom={ZOOM}&lat={LAT}&lon={LON}&layers=B000F0TF0000F0FF00",
-				'image': "lit.png",
-				'descr': "Визуализация ночного освещения (тэг lit=*).",
-				'refresh': "От нескольких часов (13-14 zoom) до нескольких дней",
-			},
-			{
-				'name': "Toolserver/locales",
-				'url': f"http://toolserver.org/~osm/locale/?zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "locale.png",
-				'descr': "Набор mapnik-слоёв с подписями на разных языках.",
-			},
-			{
-				'name': "Toolserver/hillshading",
-				'url': f"http://toolserver.org/~osm/styles/?zoom={ZOOM}&lat={LAT}&lon={LON}&layers=B000F0FT0000F0FF00",
-				'image': "hillshading.png",
-				'descr': "Карта с наложением рельефа.",
-			},
-			{
-				'name': "?Nav Debug",
-				'url': f"http://cartography.sandbox.cloudmade.com/navdebug/?zoom={ZOOM}&lat={LAT}&lng={LON}",
-				'image': "navdebug.png",
-			},
-			{
-				'name': "lowzoom",
-				'url': f"http://lowzoom.osm.rambler.ru/",
-				'image': "lowzoom.png",
-				'descr': "Обзорная карта, сгенерированная из тайлов Mapnik 9 зума при помощи <a href='http://wiki.openstreetmap.org/wiki/Tiletool'>TileTool</a>.",
-				'coverage': "Вся планета",
-				'author': "<a href='http://www.openstreetmap.org/user/AMDmi3'>AMDmi3</a>",
-				'refresh': "Нерегулярно",
 			},
 		],
 	},
@@ -388,12 +203,6 @@ objects = [
 				'coverage': "Вся планета",
 				'author': "Pascal Neis",
 			},
-			{
-				'name': "OSM Live",
-				'url': f"http://datenkueche.com/osmlive/",
-				'image': "osmlive.png",
-				'descr': "Мониторинг правок по всей планете в реальном времени",
-			},
 		],
 	},
 
@@ -407,18 +216,6 @@ objects = [
 				'descr': "Сервис для side-by-side сравнения карт. Кроме OSM поддерживает карты Google.",
 				'authors': "<a href='http://www.geofabrik.de/'>Geofabrik GmbH</a>",
 			},
-			{
-				'name': "Transparent map compare",
-				'url': f"http://sautter.com/map/?zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "transparent.png",
-				'descr': "Сервис, позволяющий сравнить две карты, наложив одну на другую с регулируемой прозрачностью. Кроме OSM поддерживает карты Google и Yahoo.",
-			},
-#			{
-#				'name': "?45F.RU",
-#				'url': f"http://45f.ru/v/atlogis/duo/?zoom={ZOOM}&lat={LAT}&lon={LON}&layers=0000000000000B0FF",
-#				'descr': "Сервис для side-by-side сравнения карт. Кроме OSM поддерживает карты Google, Yahoo, Bing, Atlogis.",
-#				'authors': "<a href='http://45f.ru'>45f.ru</a>",
-#			},
 		],
 	},
 
