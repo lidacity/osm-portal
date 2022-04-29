@@ -124,7 +124,7 @@ objects = [
 			{
 				'name': "openstreetmap.ru",
 				'url': f"http://www.openstreetmap.ru/#layer=BY&zoom={ZOOM}&lat={LAT}&lon={LON}",
-				'image': "mapsurfer_hybrid.png",
+				'image': "mapsurfer.png",
 				'descr': "Полупрозрачный слой с подписями для использования поверх спутниковых снимков и карт",
 				'authors': "Maxim Rylov and Vitaly Chezganov",
 				'coverage': "Вся планета",
