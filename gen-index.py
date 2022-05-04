@@ -18,23 +18,6 @@ LAT = "53.92"
 LON = "27.55"
 ZOOM = "11"
 
-#http://wowik.byethost7.com/routes/ru-ore/55.htm
-#http://stat.latlon.org/
-#https://osm.cupivan.ru/
-#https://disaster.ninja/live/#id=862b38e7-f7e1-486f-81d3-05394662d7c0;position=25.268380854291763,53.83782195587909;zoom=8.434805551671564
-#https://osmapa.pl/#lat=53.8856&lon=25.3226&z=14&m=os
-#https://opentouchmap.org/
-#http://tools.geofabrik.de/mc/#10/53.9313/25.4735&num=4&mt0=mapnik&mt1=geofabrik-basic-colour&mt2=mapnik-german&mt3=here-map
-#http://geo.klein-computing.de/gpx_tool.html
-#https://map.meurisse.org/
-#https://maps.darksky.net/@temperature,52.616,28.828,7
-#http://openwhatevermap.xyz/#11/53.8533/25.4196
-#http://maps.stamen.com/toner/#13/53.8966/-334.6992
-#https://print.get-map.org/new/
-#http://fieldpapers.org/compose#3/25.40/-10.99
-#https://orda.of.by/.map/?53.902253,27.561854&m=gm/17,osm/6,rkka/13,wig/13
-#https://taginfo.openstreetmap.org/
-
 
 #https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services
 objects = [
@@ -115,6 +98,46 @@ objects = [
 				'author': "<a href='http://www.openstreetmap.org/user/Kom%D1%8Fpa'>Komяpa</a>",
 				'coverage': "Беларусь",
 			},
+			{
+				'name': "Кадастровая стоимость земель",
+				'url': f"http://vl.nca.by/",
+				'image': "nca_vl.png",
+				'descr': "Кадастровая стоимость земель и налоговая база кадастрового агенства.",
+				'author': "НКА",
+				'coverage': "Беларусь",
+			},
+			{
+				'name': "Публичная кадастровая карта",
+				'url': f"https://map.nca.by/",
+				'image': "nca.png",
+				'descr': "Публичная кадастровая карта с большим количеством слоёв.",
+				'author': "НКА",
+				'coverage': "Беларусь",
+			},
+			{
+				'name': "Мозаика данных ДЗЗ",
+				'url': f"https://www.dzz.by/izuchdzz/",
+				'image': "dzz.png",
+				'descr': "Сведения о данных дистанционного зондирования Земли на территорию Республики Беларусь.",
+				'author': "Государственный комитет по имуществу Республики Беларусь",
+				'coverage': "Беларусь",
+			},
+			{
+				'name': "Геопортал ЗИС",
+				'url': f"https://gismap.by/next/",
+				'image': "gismap.png",
+				'descr': "Открытые данные геопортала ЗИС со слоями.",
+				'author': "УП Проектный институт Белгипрозем",
+				'coverage': "Беларусь",
+			},
+			{
+				'name': "Госкартгеоцентр",
+				'url': f"http://maps.by/demo/demo.html",
+				'image': "maps_by.png",
+				'descr': "Демокарта Беларуси.",
+				'author': "Госкартгеоцентр",
+				'coverage': "Беларусь",
+			},
 		],
 	},
 
@@ -136,6 +159,27 @@ objects = [
 				'descr': "Карта с большим количеством накладываемых слоёв с различной информацией (общественный транспорт, заправки, питание, туризм и т.д.).",
 				'coverage': "Европа (до 45° в.д.)",
 			},
+			{
+				'name': "OSMapa",
+				'url': f"https://osmapa.pl/#lat={LAT}&lon={LON}&z={ZOOM}&m=os",
+				'image': "osmapa.png",
+				'descr': "Польский вариант карты для Гармина.",
+				'coverage': "Мир",
+			},
+			{
+				'name': "Stamen Toner",
+				'url': f"http://maps.stamen.com/toner/#{ZOOM}/{LAT}/{LON}",
+				'image': "toner.png",
+				'descr': "Чёрно-белая карта.",
+				'coverage': "Мир",
+			},
+			{
+				'name': "Touch Map",
+				'url': f"https://opentouchmap.org/",
+				'image': "opentouchmap.png",
+				'descr': "Карта без лишнего.",
+				'coverage': "Мир",
+			},
 		],
 	},
 
@@ -150,11 +194,27 @@ objects = [
 				'coverage': "Вся планета",
 				'refresh': "Приблизительно раз в неделю (актуальность данных можно посмотреть нажав на кнопку с шестерёнкой)",
 			},
+			{
+				'name': "GPX Tool",
+				'url': f"http://geo.klein-computing.de/gpx_tool.html",
+				'image': "gpxtool.png",
+				'descr': "Работа с координатами.",
+				'coverage': "Вся планета",
+				'author': "<a href='http://geo.klein-computing.de/'>Geo Tools, Pascal Klein</a>",
+			},
+			{
+				'name': "Distance Calculator",
+				'url': f"https://map.meurisse.org/",
+				'image': "distance.png",
+				'descr': "Работа с построением путей.",
+				'coverage': "Вся планета",
+			},
+#
 		],
 	},
 
 	{
-		'caption': "Инструменты контроля качества",
+		'caption': "Контроль качества",
 		'items': [
 			{
 				'name': "KeepRight!",
@@ -181,6 +241,50 @@ objects = [
 				'refresh': "Несколько дней",
 				'authors': "<a href='http://www.geofabrik.de/'>Geofabrik GmbH</a>",
 			},
+			{
+				'name': "Валидатор автодорог",
+				'url': f"http://wowik.byethost7.com/routes/",
+				'image': "wowik_routes.png",
+				'descr': "Валидатор автодорог",
+				'coverage': "Европа",
+				'refresh': "Несколько раз в месяц",
+				'authors': "iWowik",
+			},
+			{
+				'name': "Список населенных мест",
+				'url': f"http://wowik.byethost7.com/places/by/",
+				'image': "wowik_places.png",
+				'descr': "Валидатор населённых пунктов",
+				'coverage': "Европа",
+				'refresh': "Несколько раз в месяц",
+				'authors': "iWowik",
+			},
+			{
+				'name': "TagInfo",
+				'url': f"https://taginfo.openstreetmap.org/",
+				'image': "taginfo.png",
+				'descr': "OpenStreetMap использует теги в виде ключ=значение для описания географических объектов. Taginfo собирает информацию об этих тегах из нескольких источников, чтобы помочь вам разобраться, что каждый тег означает и как применяется.",
+				'coverage': "Весь мир",
+				'refresh': "Ежедневно",
+			},
+			{
+				'name': "Карта подъездов и номера квартир",
+				'url': f"https://osm.cupivan.ru/entrance/#366/?z={ZOOM}&lat={LAT}&lon={LON}",
+				'image': "entrance.png",
+				'descr': "Валидатор подъездов. На данной карте можно посмотреть в каких подъездах не проставлены номера квартир, а также этажность и адрес на здании.",
+				'coverage': "Весь мир",
+				'refresh': "Онлайн",
+				'authors': "CupIvan",
+			},
+			{
+				'name': "Этажность зданий на карте",
+				'url': f"https://osm.cupivan.ru/levels/#366/?z={ZOOM}&lat={LAT}&lon={LON}",
+				'image': "levels.png",
+				'descr': "Этажность зданий. Раскраска зданий по количеству этажей. Удобно смотреть где ещё не указаны этажи.",
+				'coverage': "Весь мир",
+				'refresh': "Онлайн",
+				'authors': "CupIvan",
+			},
 		],
 	},
 
@@ -203,6 +307,14 @@ objects = [
 				'coverage': "Вся планета",
 				'author': "Pascal Neis",
 			},
+			{
+				'name': "Disaster Ninja",
+				'url': f"https://disaster.ninja/live/#position={LON},{LAT};zoom={ZOOM}",
+				'image': "disaster_ninja.png",
+				'descr': "В шестиугольниках показываются наиболее активные участники правок",
+				'coverage': "Вся планета",
+				'author': "Pascal Neis",
+			},
 		],
 	},
 
@@ -216,13 +328,48 @@ objects = [
 				'descr': "Сервис для side-by-side сравнения карт. Кроме OSM поддерживает карты Google.",
 				'authors': "<a href='http://www.geofabrik.de/'>Geofabrik GmbH</a>",
 			},
+			{
+				'name': "XYZ",
+				'url': f"http://openwhatevermap.xyz/#{ZOOM}/{LAT}/{LON}",
+				'image': "xyz.png",
+				'descr': "Карта отображается из кусочков разных стилей.",
+			},
+			{
+				'name': "Сравнение OSM с Народной картой",
+				'url': f"https://osm.cupivan.ru/OSMvsNarod/",
+				'image': "OSMvsNarod.png",
+				'descr': "Сравнение с картой Яндекса. Двойная карта OSM / Яндекс. Поиск населённых пунктов и координаты городов в формате Википедии.",
+				'author': "CupIvan",
+			},
 		],
 	},
 
-	# TODO: добавить, как минимум: latlon, openorientingmap
-	#
-	# TODO: добавить все текстовые ресурсы (водный реестр, валидатор адресов от Лёши и т.д.)
-	# TODO: добавить альтернативные проекты и карты (нужно?)
+	{
+		'caption': "Разное",
+		'items': [
+			{
+				'name': "Dark Sky Map",
+				'url': f"https://maps.darksky.net/@temperature,{LAT},{LON},{ZOOM}",
+				'image': "dark_sky_map.png",
+				'descr': "Погода.",
+				'coverage': "Мир",
+			},
+			{
+				'name': "Field Paprers",
+				'url': f"http://fieldpapers.org/compose#{ZOOM}/{LAT}/{LON}",
+				'image': "fieldpapers.png",
+				'descr': "Сделать полевые материалы для печати.",
+				'coverage': "Мир",
+			},
+			{
+				'name': "Сгенерировать карту",
+				'url': f"https://print.get-map.org/new/",
+				'image': "MyOSMatic.png",
+				'descr': "Это свободный веб-сервис, позволяющий генерировать карты городов с использованием данных OpenStreetMap. Сгенерированные карты доступны в форматах PNG, PDF и SVG, и готовы к распечатке.",
+				'coverage': "Мир",
+			},
+		],
+	},
 ]
 
 with open("index.html.new", mode="w", encoding="utf-8", newline="\n") as f:
