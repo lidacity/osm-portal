@@ -1,0 +1,520 @@
+<html><head><title>OSM::Portal: всё это - OpenStreetMap</title>
+<meta http-equiv="Content-type" value="text/html; charset=utf-8">
+<link rel="stylesheet" media="screen" href="osm-portal.css">
+</head>
+<body>
+<div id="switcher">
+<input type="radio" name="selector" id="radio0" checked="checked"/><label for="radio0">Официальные рендеры</label>
+<input type="radio" name="selector" id="radio1"/><label for="radio1">Беларусь</label>
+<input type="radio" name="selector" id="radio2"/><label for="radio2">Сторонние рендеры</label>
+<input type="radio" name="selector" id="radio3"/><label for="radio3">Прокладка маршрутов</label>
+<input type="radio" name="selector" id="radio4"/><label for="radio4">Контроль качества</label>
+<input type="radio" name="selector" id="radio5"/><label for="radio5">Информация по участникам OSM</label>
+<input type="radio" name="selector" id="radio6"/><label for="radio6">Сравнение карт</label>
+<input type="radio" name="selector" id="radio7"/><label for="radio7">Разное</label>
+</div>
+<div class="page"><h1>Официальные рендеры</h1>
+<div class="block"><a href="http://www.openstreetmap.org/?lat=53.92&lon=27.55&zoom=11&layers=M"><h2>Mapnik</h2></a>
+<div class="descr">
+<p>Основной рендер OpenStreetMap. При этом самый быстрый - задержка между внесением изменений в карту и отрисовкой обычно не превышает нескольких минут.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Минуты</li>
+<li><b>Покрытие:</b> Вся планета</li>
+</ul>
+</div>
+<a href="http://www.openstreetmap.org/?lat=53.92&lon=27.55&zoom=11&layers=M"><img src="mapnik.png"></a>
+</div>
+<div class="block"><a href="http://www.openstreetmap.org/?lat=53.92&lon=27.55&zoom=11&layers=Y"><h2>CyclOSM</h2></a>
+<div class="descr">
+<p>CyclOSM — это принципиально новая карта для велосипедистов, основанная на данных OpenStreetMap. Проект ставит своей целью — создание красивой и практичной карты для велосипедистов, независимо от их привычек и способностей.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Несколько дней</li>
+<li><b>Покрытие:</b> Вся планета</li>
+<li><b>Автор:</b> <a href='https://cyclosm.org/'>cyclosm</a></li>
+</ul>
+</div>
+<a href="http://www.openstreetmap.org/?lat=53.92&lon=27.55&zoom=11&layers=Y"><img src="CyclOSM.png"></a>
+</div>
+<div class="block"><a href="http://www.openstreetmap.org/?lat=53.92&lon=27.55&zoom=11&layers=C"><h2>Cycle Map</h2></a>
+<div class="descr">
+<p>Карта для велосипедистов с топографией и выделением веломаршрутов.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Несколько дней</li>
+<li><b>Покрытие:</b> Вся планета</li>
+</ul>
+</div>
+<a href="http://www.openstreetmap.org/?lat=53.92&lon=27.55&zoom=11&layers=C"><img src="cyclemap.png"></a>
+</div>
+<div class="block"><a href="http://www.openstreetmap.org/?lat=53.92&lon=27.55&zoom=11&layers=T"><h2>Transport Map</h2></a>
+<div class="descr">
+<p>Слой с маршрутами общественного транспорта.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Несколько дней</li>
+<li><b>Покрытие:</b> Вся планета</li>
+</ul>
+</div>
+<a href="http://www.openstreetmap.org/?lat=53.92&lon=27.55&zoom=11&layers=T"><img src="transport_map.png"></a>
+</div>
+<div class="block"><a href="http://www.xn--pnvkarte-m4a.de/?zoom=11&lat=53.92&lon=27.55"><h2>&Ouml;PNV-Karte</h2></a>
+<div class="descr">
+<p>Сторонний рендер с маршрутами общественного транспорта.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Раз в несколько дней</li>
+<li><b>Покрытие:</b> Вся планета</li>
+<li><b>Автор:</b> <a href='http://xn--pnvkarte-m4a.de/'>&Ouml;PNV-Karte</a></li>
+</ul>
+</div>
+<a href="http://www.xn--pnvkarte-m4a.de/?zoom=11&lat=53.92&lon=27.55"><img src="opnvkarte.png"></a>
+</div>
+<div class="block"><a href="http://www.openstreetmap.org/?lat=53.92&lon=27.55&zoom=11&layers=H"><h2>Humanitarian</h2></a>
+<div class="descr">
+<p>Этот стиль карты сосредоточен на ресурсах, полезных для гуманитарных организаций и граждан в целом в чрезвычайных ситуациях, выделяя POI, такие как водные ресурсы (колодцы, ручные насосы, пожарные гидранты ...), источники света, общественные здания, социальные здания, качество дорог и т.д. Используемые цвета светлые, поэтому люди могут распечатать их, а затем легко рисовать и писать поверх карты (это полезная функция для гуманитарных организаций для обновления информации на распечатанной карте в таких ситуациях, как землетрясение, например).</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Несколько дней</li>
+<li><b>Покрытие:</b> Вся планета</li>
+</ul>
+</div>
+<a href="http://www.openstreetmap.org/?lat=53.92&lon=27.55&zoom=11&layers=H"><img src="humanitarian.png"></a>
+</div>
+</div>
+<div class="page"><h1>Беларусь</h1>
+<div class="block"><a href="http://openstreetmap.by/?lat=53.92&lon=27.55&zoom=11"><h2>OpenStreetMap.by</h2></a>
+<div class="descr">
+<p>Рендер с продвинутым стилем.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Минуты</li>
+<li><b>Покрытие:</b> Вся планета</li>
+<li><b>Автор:</b> <a href='http://www.openstreetmap.org/user/Kom%D1%8Fpa'>Komяpa</a></li>
+</ul>
+</div>
+<a href="http://openstreetmap.by/?lat=53.92&lon=27.55&zoom=11"><img src="osmby.png"></a>
+</div>
+<div class="block"><a href="http://latlon.org/#11/53.92/27.55?layers=L"><h2>LatLon.org</h2></a>
+<div class="descr">
+<p>Рендер Беларуси на белорусском языке.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Реальное время</li>
+<li><b>Покрытие:</b> Беларусь</li>
+<li><b>Автор:</b> <a href='http://www.openstreetmap.org/user/Kom%D1%8Fpa'>Komяpa</a></li>
+</ul>
+</div>
+<a href="http://latlon.org/#11/53.92/27.55?layers=L"><img src="latlon_buildings.png"></a>
+</div>
+<div class="block"><a href="http://vl.nca.by/"><h2>Кадастровая стоимость земель</h2></a>
+<div class="descr">
+<p>Кадастровая стоимость земель и налоговая база кадастрового агенства.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Беларусь</li>
+<li><b>Автор:</b> НКА</li>
+</ul>
+</div>
+<a href="http://vl.nca.by/"><img src="nca_vl.png"></a>
+</div>
+<div class="block"><a href="https://map.nca.by/"><h2>Публичная кадастровая карта</h2></a>
+<div class="descr">
+<p>Публичная кадастровая карта с большим количеством слоёв.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Беларусь</li>
+<li><b>Автор:</b> НКА</li>
+</ul>
+</div>
+<a href="https://map.nca.by/"><img src="nca.png"></a>
+</div>
+<div class="block"><a href="https://www.dzz.by/izuchdzz/"><h2>Мозаика данных ДЗЗ</h2></a>
+<div class="descr">
+<p>Сведения о данных дистанционного зондирования Земли на территорию Республики Беларусь.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Беларусь</li>
+<li><b>Автор:</b> Государственный комитет по имуществу Республики Беларусь</li>
+</ul>
+</div>
+<a href="https://www.dzz.by/izuchdzz/"><img src="dzz.png"></a>
+</div>
+<div class="block"><a href="https://gismap.by/next/"><h2>Геопортал ЗИС</h2></a>
+<div class="descr">
+<p>Открытые данные геопортала ЗИС со слоями.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Беларусь</li>
+<li><b>Автор:</b> УП Проектный институт Белгипрозем</li>
+</ul>
+</div>
+<a href="https://gismap.by/next/"><img src="gismap.png"></a>
+</div>
+<div class="block"><a href="http://maps.by/demo/demo.html"><h2>Госкартгеоцентр</h2></a>
+<div class="descr">
+<p>Демокарта Беларуси.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Беларусь</li>
+<li><b>Автор:</b> Госкартгеоцентр</li>
+</ul>
+</div>
+<a href="http://maps.by/demo/demo.html"><img src="maps_by.png"></a>
+</div>
+</div>
+<div class="page"><h1>Сторонние рендеры</h1>
+<div class="block"><a href="http://www.openstreetmap.ru/#layer=BY&zoom=11&lat=53.92&lon=27.55"><h2>openstreetmap.ru</h2></a>
+<div class="descr">
+<p>Полупрозрачный слой с подписями для использования поверх спутниковых снимков и карт</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Вся планета</li>
+<li><b>Авторы:</b> Maxim Rylov and Vitaly Chezganov</li>
+</ul>
+</div>
+<a href="http://www.openstreetmap.ru/#layer=BY&zoom=11&lat=53.92&lon=27.55"><img src="mapsurfer.png"></a>
+</div>
+<div class="block"><a href="http://www.openstreetbrowser.org/?zoom=11&lat=53.92&lon=27.55"><h2>OpenStreetBrowser</h2></a>
+<div class="descr">
+<p>Карта с большим количеством накладываемых слоёв с различной информацией (общественный транспорт, заправки, питание, туризм и т.д.).</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Европа (до 45° в.д.)</li>
+</ul>
+</div>
+<a href="http://www.openstreetbrowser.org/?zoom=11&lat=53.92&lon=27.55"><img src="openstreetbrowser.png"></a>
+</div>
+<div class="block"><a href="https://osmapa.pl/#lat=53.92&lon=27.55&z=11&m=os"><h2>OSMapa</h2></a>
+<div class="descr">
+<p>Польский вариант карты для Гармина.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Мир</li>
+</ul>
+</div>
+<a href="https://osmapa.pl/#lat=53.92&lon=27.55&z=11&m=os"><img src="osmapa.png"></a>
+</div>
+<div class="block"><a href="http://maps.stamen.com/toner/#11/53.92/27.55"><h2>Stamen Toner</h2></a>
+<div class="descr">
+<p>Чёрно-белая карта.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Мир</li>
+</ul>
+</div>
+<a href="http://maps.stamen.com/toner/#11/53.92/27.55"><img src="toner.png"></a>
+</div>
+<div class="block"><a href="https://opentouchmap.org/"><h2>Touch Map</h2></a>
+<div class="descr">
+<p>Карта без лишнего.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Мир</li>
+</ul>
+</div>
+<a href="https://opentouchmap.org/"><img src="opentouchmap.png"></a>
+</div>
+</div>
+<div class="page"><h1>Прокладка маршрутов</h1>
+<div class="block"><a href="http://map.project-osrm.org/?z=11&center=53.92,27.55"><h2>OSRM</h2></a>
+<div class="descr">
+<p>Быстрая прокладка маршрутов по карте OSM.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Приблизительно раз в неделю (актуальность данных можно посмотреть нажав на кнопку с шестерёнкой)</li>
+<li><b>Покрытие:</b> Вся планета</li>
+</ul>
+</div>
+<a href="http://map.project-osrm.org/?z=11&center=53.92,27.55"><img src="osrm.png"></a>
+</div>
+<div class="block"><a href="http://geo.klein-computing.de/gpx_tool.html"><h2>GPX Tool</h2></a>
+<div class="descr">
+<p>Работа с координатами.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Вся планета</li>
+<li><b>Автор:</b> <a href='http://geo.klein-computing.de/'>Geo Tools, Pascal Klein</a></li>
+</ul>
+</div>
+<a href="http://geo.klein-computing.de/gpx_tool.html"><img src="gpxtool.png"></a>
+</div>
+<div class="block"><a href="https://map.meurisse.org/"><h2>Distance Calculator</h2></a>
+<div class="descr">
+<p>Работа с построением путей.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Вся планета</li>
+</ul>
+</div>
+<a href="https://map.meurisse.org/"><img src="distance.png"></a>
+</div>
+</div>
+<div class="page"><h1>Контроль качества</h1>
+<div class="block"><a href="http://keepright.ipax.at/report_map.php?zoom=11&lat=53.92&lon=27.55"><h2>KeepRight!</h2></a>
+<div class="descr">
+<p>Инструмент, помогающий выявить огромное количество топологических ошибок на карте, включая неправильно отмеченные объекты, отсутствие необходимых тэгов, несоединённые и самопересекающиеся дороги и т.д.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Примерно раз в неделю</li>
+<li><b>Покрытие:</b> Вся планета</li>
+</ul>
+</div>
+<a href="http://keepright.ipax.at/report_map.php?zoom=11&lat=53.92&lon=27.55"><img src="keepright.png"></a>
+</div>
+<div class="block"><a href="http://simon04.dev.openstreetmap.org/whodidit/?zoom=11&lat=53.92&lon=27.55"><h2>WHO DID IT?!</h2></a>
+<div class="descr">
+<p>Мониторинг правок пользователей на выбранной территории.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Ежечасно</li>
+<li><b>Покрытие:</b> Вся планета</li>
+</ul>
+</div>
+<a href="http://simon04.dev.openstreetmap.org/whodidit/?zoom=11&lat=53.92&lon=27.55"><img src="whodidit.png"></a>
+</div>
+<div class="block"><a href="http://tools.geofabrik.de/osmi/?view=addresses&zoom=11&lat=53.92&lon=27.55"><h2>Geofabrik Tools/OSM Inspector</h2></a>
+<div class="descr">
+<p>Набор инструментов для визуализации различных объектов и их отношений на карте. Включает инструменты, показывающие ошибки геометрии и тэгов, а также подробную визуализацию населённых пунктов, дорожной сети, адресации, границ, водоёмов, общественного транспорта.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Несколько дней</li>
+<li><b>Покрытие:</b> Европа (до 45° в.д.)</li>
+<li><b>Авторы:</b> <a href='http://www.geofabrik.de/'>Geofabrik GmbH</a></li>
+</ul>
+</div>
+<a href="http://tools.geofabrik.de/osmi/?view=addresses&zoom=11&lat=53.92&lon=27.55"><img src="osminspector.png"></a>
+</div>
+<div class="block"><a href="http://wowik.byethost7.com/routes/"><h2>Валидатор автодорог</h2></a>
+<div class="descr">
+<p>Валидатор автодорог</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Несколько раз в месяц</li>
+<li><b>Покрытие:</b> Европа</li>
+<li><b>Авторы:</b> iWowik</li>
+</ul>
+</div>
+<a href="http://wowik.byethost7.com/routes/"><img src="wowik_routes.png"></a>
+</div>
+<div class="block"><a href="http://wowik.byethost7.com/places/by/"><h2>Список населенных мест</h2></a>
+<div class="descr">
+<p>Валидатор населённых пунктов</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Несколько раз в месяц</li>
+<li><b>Покрытие:</b> Европа</li>
+<li><b>Авторы:</b> iWowik</li>
+</ul>
+</div>
+<a href="http://wowik.byethost7.com/places/by/"><img src="wowik_places.png"></a>
+</div>
+<div class="block"><a href="https://taginfo.openstreetmap.org/"><h2>TagInfo</h2></a>
+<div class="descr">
+<p>OpenStreetMap использует теги в виде ключ=значение для описания географических объектов. Taginfo собирает информацию об этих тегах из нескольких источников, чтобы помочь вам разобраться, что каждый тег означает и как применяется.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Ежедневно</li>
+<li><b>Покрытие:</b> Весь мир</li>
+</ul>
+</div>
+<a href="https://taginfo.openstreetmap.org/"><img src="taginfo.png"></a>
+</div>
+<div class="block"><a href="https://osm.cupivan.ru/entrance/#366/?z=11&lat=53.92&lon=27.55"><h2>Карта подъездов и номера квартир</h2></a>
+<div class="descr">
+<p>Валидатор подъездов. На данной карте можно посмотреть в каких подъездах не проставлены номера квартир, а также этажность и адрес на здании.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Онлайн</li>
+<li><b>Покрытие:</b> Весь мир</li>
+<li><b>Авторы:</b> CupIvan</li>
+</ul>
+</div>
+<a href="https://osm.cupivan.ru/entrance/#366/?z=11&lat=53.92&lon=27.55"><img src="entrance.png"></a>
+</div>
+<div class="block"><a href="https://osm.cupivan.ru/levels/#366/?z=11&lat=53.92&lon=27.55"><h2>Этажность зданий на карте</h2></a>
+<div class="descr">
+<p>Этажность зданий. Раскраска зданий по количеству этажей. Удобно смотреть где ещё не указаны этажи.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Время обновления:</b> Онлайн</li>
+<li><b>Покрытие:</b> Весь мир</li>
+<li><b>Авторы:</b> CupIvan</li>
+</ul>
+</div>
+<a href="https://osm.cupivan.ru/levels/#366/?z=11&lat=53.92&lon=27.55"><img src="levels.png"></a>
+</div>
+</div>
+<div class="page"><h1>Информация по участникам OSM</h1>
+<div class="block"><a href="http://yosmhm.neis-one.org/"><h2>OSM Heat Map</h2></a>
+<div class="descr">
+<p>'Тепловая карта' правок пользователя</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Вся планета</li>
+<li><b>Автор:</b> Pascal Neis</li>
+</ul>
+</div>
+<a href="http://yosmhm.neis-one.org/"><img src="heatmap.png"></a>
+</div>
+<div class="block"><a href="http://resultmaps.neis-one.org/oooc?zoom=11&lat=53.92&lon=27.55"><h2>OoOC</h2></a>
+<div class="descr">
+<p>Карта, отображающая примерное положение и количество правок участников OSM</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Вся планета</li>
+<li><b>Автор:</b> Pascal Neis</li>
+</ul>
+</div>
+<a href="http://resultmaps.neis-one.org/oooc?zoom=11&lat=53.92&lon=27.55"><img src="oooc.png"></a>
+</div>
+<div class="block"><a href="https://disaster.ninja/live/#position=27.55,53.92;zoom=11"><h2>Disaster Ninja</h2></a>
+<div class="descr">
+<p>В шестиугольниках показываются наиболее активные участники правок</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Вся планета</li>
+<li><b>Автор:</b> Pascal Neis</li>
+</ul>
+</div>
+<a href="https://disaster.ninja/live/#position=27.55,53.92;zoom=11"><img src="disaster_ninja.png"></a>
+</div>
+</div>
+<div class="page"><h1>Сравнение карт</h1>
+<div class="block"><a href="http://tools.geofabrik.de/mc/?zoom=11&lat=53.92&lon=27.55"><h2>Geofabrik Tools/Map Compare</h2></a>
+<div class="descr">
+<p>Сервис для side-by-side сравнения карт. Кроме OSM поддерживает карты Google.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Авторы:</b> <a href='http://www.geofabrik.de/'>Geofabrik GmbH</a></li>
+</ul>
+</div>
+<a href="http://tools.geofabrik.de/mc/?zoom=11&lat=53.92&lon=27.55"><img src="mapcompare.png"></a>
+</div>
+<div class="block"><a href="http://openwhatevermap.xyz/#11/53.92/27.55"><h2>XYZ</h2></a>
+<div class="descr">
+<p>Карта отображается из кусочков разных стилей.</p>
+
+</div>
+<a href="http://openwhatevermap.xyz/#11/53.92/27.55"><img src="xyz.png"></a>
+</div>
+<div class="block"><a href="https://osm.cupivan.ru/OSMvsNarod/"><h2>Сравнение OSM с Народной картой</h2></a>
+<div class="descr">
+<p>Сравнение с картой Яндекса. Двойная карта OSM / Яндекс. Поиск населённых пунктов и координаты городов в формате Википедии.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Автор:</b> CupIvan</li>
+</ul>
+</div>
+<a href="https://osm.cupivan.ru/OSMvsNarod/"><img src="OSMvsNarod.png"></a>
+</div>
+</div>
+<div class="page"><h1>Разное</h1>
+<div class="block"><a href="https://maps.darksky.net/@temperature,53.92,27.55,11"><h2>Dark Sky Map</h2></a>
+<div class="descr">
+<p>Погода.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Мир</li>
+</ul>
+</div>
+<a href="https://maps.darksky.net/@temperature,53.92,27.55,11"><img src="dark_sky_map.png"></a>
+</div>
+<div class="block"><a href="http://fieldpapers.org/compose#11/53.92/27.55"><h2>Field Paprers</h2></a>
+<div class="descr">
+<p>Сделать полевые материалы для печати.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Мир</li>
+</ul>
+</div>
+<a href="http://fieldpapers.org/compose#11/53.92/27.55"><img src="fieldpapers.png"></a>
+</div>
+<div class="block"><a href="https://print.get-map.org/new/"><h2>Сгенерировать карту</h2></a>
+<div class="descr">
+<p>Это свободный веб-сервис, позволяющий генерировать карты городов с использованием данных OpenStreetMap. Сгенерированные карты доступны в форматах PNG, PDF и SVG, и готовы к распечатке.</p>
+
+</div>
+<div class="descr">
+<ul>
+<li><b>Покрытие:</b> Мир</li>
+</ul>
+</div>
+<a href="https://print.get-map.org/new/"><img src="MyOSMatic.png"></a>
+</div>
+</div>
+<script src="osm-portal.js" type="text/javascript"></script>
+</body></html>
